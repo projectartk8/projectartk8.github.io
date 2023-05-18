@@ -78,3 +78,11 @@ function fadeIn(el, display) {
         }
     })();
 };
+
+$('.button-ondas').on('click', function (event) {
+    $('#toolsModal').modal('show')
+  });
+
+  $('.close').on('click', function (event) {
+    $('#toolsModal').modal('hide')
+  });
