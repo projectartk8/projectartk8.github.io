@@ -80,9 +80,87 @@ function fadeIn(el, display) {
 };
 
 $('.button-ondas').on('click', function (event) {
-    $('#toolsModal').modal('show')
+    var botonData = $(this).data('item');
+    console.log(botonData)
+   switch(botonData){
+       case "esponja": $('#spongeInfoID').show();
+                       $('#alambreInfoID').hide();
+                       $('#alfilerInfoID').hide();
+                       $('#costillaInfoID').hide();
+                       $('#navajaInfoID').hide();
+                       $('#bucleInfoID').hide();
+                       $('#cutterInfoID').hide();
+                       $('#calibradorInfoID').hide();
+       break;
+       case "alambre": $('#spongeInfoID').hide();
+                       $('#alambreInfoID').show();
+                       $('#alfilerInfoID').hide();
+                       $('#costillaInfoID').hide();
+                       $('#navajaInfoID').hide();
+                       $('#bucleInfoID').hide();
+                       $('#cutterInfoID').hide();
+                       $('#calibradorInfoID').hide();
+       break;
+       case "alfiler": $('#spongeInfoID').hide();
+                       $('#alambreInfoID').hide();
+                       $('#alfilerInfoID').show();
+                       $('#costillaInfoID').hide();
+                       $('#navajaInfoID').hide();
+                       $('#bucleInfoID').hide();
+                       $('#cutterInfoID').hide();
+                       $('#calibradorInfoID').hide();
+       break;
+       case "costilla": $('#spongeInfoID').hide();
+                       $('#alambreInfoID').hide();
+                       $('#alfilerInfoID').hide();
+                       $('#costillaInfoID').show();
+                       $('#navajaInfoID').hide();
+                       $('#bucleInfoID').hide();
+                       $('#cutterInfoID').hide();
+                       $('#calibradorInfoID').hide();
+       break;
+       case "navaja": $('#spongeInfoID').hide();
+                       $('#alambreInfoID').hide();
+                       $('#alfilerInfoID').hide();
+                       $('#costillaInfoID').hide();
+                       $('#navajaInfoID').show();
+                       $('#bucleInfoID').hide();
+                       $('#cutterInfoID').hide();
+                       $('#calibradorInfoID').hide();
+           break;
+       case "bucle": $('#spongeInfoID').hide();
+           $('#alambreInfoID').hide();
+           $('#alfilerInfoID').hide();
+           $('#costillaInfoID').hide();
+           $('#navajaInfoID').hide();
+           $('#bucleInfoID').show();
+           $('#cutterInfoID').hide();
+           $('#calibradorInfoID').hide();
+           break;
+       case "cutter": $('#spongeInfoID').hide();
+           $('#alambreInfoID').hide();
+           $('#alfilerInfoID').hide();
+           $('#costillaInfoID').hide();
+           $('#navajaInfoID').hide();
+           $('#bucleInfoID').hide();
+           $('#cutterInfoID').show();
+           $('#calibradorInfoID').hide();
+           break;
+       case "calibrador": $('#spongeInfoID').hide();
+           $('#alambreInfoID').hide();
+           $('#alfilerInfoID').hide();
+           $('#costillaInfoID').hide();
+           $('#navajaInfoID').hide();
+           $('#bucleInfoID').hide();
+           $('#cutterInfoID').hide();
+           $('#calibradorInfoID').show();
+           break;
+
+   }
+
+    $('#toolsModal').modal('show');
   });
 
   $('.close').on('click', function (event) {
-    $('#toolsModal').modal('hide')
+    $('#toolsModal').modal('hide');
   });
